@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import { slideLeft, slideRight, useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { SectionHeading } from '../layout/SectionHeading';
 
+const baseUrl = import.meta.env.BASE_URL || '';
+const mapImageUrl = `${baseUrl}images/access/aurelia-access-map.jpg`;
+
 const accessItems = [
   [MapPin, '住所', '〒152-0035\n東京都目黒区自由が丘 2-15-10 1F'],
   [Clock, '営業時間', '10:00 - 19:00\n（最終受付 17:00）'],
@@ -19,7 +22,7 @@ export function Access() {
         <SectionHeading title="ACCESS" subtitle="アクセス" className="[&_h2]:text-[58px]" />
         <motion.div ref={ref} initial="hidden" animate={controls} className="mt-7 grid gap-12 lg:grid-cols-[1fr_0.98fr]">
           <motion.div variants={slideLeft} className="border border-gold/35 bg-white p-1 shadow-[0_8px_20px_rgba(66,43,14,0.05)]">
-            <img src="/images/access/aurelia-access-map.jpg" alt="AURELIA DOG SALON周辺地図" className="h-[356px] w-full object-cover" />
+            <img src={mapImageUrl} alt="AURELIA DOG SALON周辺地図" className="h-[356px] w-full object-cover" />
           </motion.div>
           <motion.div variants={slideRight} className="grid gap-4">
             {accessItems.map(([Icon, label, value]) => (

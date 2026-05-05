@@ -2,10 +2,11 @@ import { motion } from 'framer-motion';
 import { scaleIn, useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { SectionHeading } from '../layout/SectionHeading';
 
+const baseUrl = import.meta.env.BASE_URL || '';
 const groups = [
-  ['/images/gallery/toy-poodle-before-clean.jpg', '/images/gallery/toy-poodle-after-clean.jpg', ['BEFORE', 'AFTER']],
-  ['/images/gallery/brown-poodle-before-clean.jpg', '/images/gallery/brown-poodle-after-clean.jpg', ['BEFORE', 'AFTER']],
-  ['/images/gallery/maltese-yorkie-before-clean.jpg', '/images/gallery/maltese-yorkie-after-clean.jpg', ['FINISHED CUT', 'FINISHED CUT']],
+  [`${baseUrl}images/gallery/toy-poodle-before-clean.jpg`, `${baseUrl}images/gallery/toy-poodle-after-clean.jpg`, ['BEFORE', 'AFTER']],
+  [`${baseUrl}images/gallery/brown-poodle-before-clean.jpg`, `${baseUrl}images/gallery/brown-poodle-after-clean.jpg`, ['BEFORE', 'AFTER']],
+  [`${baseUrl}images/gallery/maltese-yorkie-before-clean.jpg`, `${baseUrl}images/gallery/maltese-yorkie-after-clean.jpg`, ['FINISHED CUT', 'FINISHED CUT']],
 ];
 
 export function Gallery() {

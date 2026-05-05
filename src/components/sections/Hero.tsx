@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-const heroBg = '/images/hero-bg.webp';
+const heroBg = import.meta.env.BASE_URL + 'images/hero-bg.webp';
 
 export function Hero() {
   return (
